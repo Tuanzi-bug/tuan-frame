@@ -11,7 +11,7 @@ type treeNode struct {
 
 func (t *treeNode) Put(path string) {
 	root := t
-	strs := strings.Split(root.name, "/")
+	strs := strings.Split(path, "/")
 	for index, name := range strs {
 		if index == 0 {
 			continue
