@@ -7,6 +7,7 @@ import (
 type HandlerFunc func(ctx *Context)
 
 type Context struct {
-	W http.ResponseWriter
-	R *http.Request
+	Req        *http.Request
+	Resp       http.ResponseWriter
+	PathParams map[string]string
 }
